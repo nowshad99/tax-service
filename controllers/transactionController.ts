@@ -9,7 +9,7 @@ import {
 export const ingestTransaction = (req: Request, res: Response) => {
   const event = req.body;
 
-  // Validate the event (is this needed?)
+  // Validate the event
   if (!event.eventType || !event.date) {
     return res.status(400).json({ message: "Invalid event format" });
   }
