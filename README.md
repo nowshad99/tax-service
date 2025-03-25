@@ -19,6 +19,7 @@ The tax position is calculated as:
   - [Ingest Transactions](#1-ingest-transactions-post-transactions)
   - [Query Tax Position](#2-query-tax-position-get-tax-position)
   - [Amend a Sale](#3-amend-a-sale-patch-sale)
+- [Testing](#testing)
 
 ---
 
@@ -48,6 +49,8 @@ This uses nodemon to automatically reload on changes.
     npm start
     ```
 The service runs by default on http://localhost:3000
+
+---
 
 ## API Endpoints
 
@@ -123,3 +126,19 @@ Content-Type: application/json
 ✅ Response: 202 Accepted (No body)
 
 If the sale already exists, it is updated immediately. If the sale has not been received yet, the amendment is stored and applied later.
+
+---
+
+## Testing
+You can run tests using Jest & Supertest.
+
+1. **Ensure test dependencies are installed (if not already)**
+  ```sh
+  npm install -D jest supertest ts-jest @types/jest @types/supertest
+  ```
+
+2. **Run tests**
+  ```sh
+  npm test
+  ```
+This will run the tests with code coverage.
